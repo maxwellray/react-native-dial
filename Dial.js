@@ -28,9 +28,6 @@ export class Dial extends Component {
     }
     this.offset = { x: 0, y: 0 }
     this.updateState = throttle(this.updateState.bind(this), 16)
-  }
-
-  componentWillMount () {
     this._panResponder = PanResponder.create({
       onStartShouldSetPanResponder: (e, gestureState) => true,
       onStartShouldSetPanResponderCapture: (e, gestureState) => {
